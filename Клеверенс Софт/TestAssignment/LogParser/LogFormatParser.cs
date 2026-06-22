@@ -66,12 +66,7 @@ public static partial class LogFormatParser
         if (date.Contains('.'))
         {
             var p = date.Split('.');
-            return $"{p[0]:D2}-{p[1]:D2}-{p[2]}";
-        }
-        if (date.Contains('-'))
-        {
-            var p = date.Split('-');
-            return $"{p[2]:D2}-{p[1]:D2}-{p[0]}";
+            return $"{p[2]}-{p[1]:D2}-{p[0]:D2}";
         }
         return date;
     }
